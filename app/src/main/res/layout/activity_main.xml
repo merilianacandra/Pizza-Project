@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="110dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:longClickable="true"
+        android:onClick="pizza1"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/piza1" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Beef Sausage"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="110dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:onClick="pizza3"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/piza3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="Beef Rasher"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
+        app:layout_constraintStart_toStartOf="@+id/imageButton8"
+        app:layout_constraintTop_toTopOf="@+id/imageButton8" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="110dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="pizza2"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/piza2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="Chili Chicken"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton9"
+        app:layout_constraintStart_toStartOf="@+id/imageButton9"
+        app:layout_constraintTop_toTopOf="@+id/imageButton9" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="49dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:text="Size"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+
+
+    <RadioGroup
+        android:id="@+id/size_botton"
+        android:layout_width="408dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:onClick="getSelected" />
+
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:onClick="getSelected" />
+
+        <RadioButton
+            android:id="@+id/large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="80dp"
+            android:onClick="getSelected" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="Small"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size_botton" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/size_botton" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Large"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size_botton" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="Toppings"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/avocado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:onClick="getSelected"
+        android:text="Avocado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <CheckBox
+        android:id="@+id/brocolli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:onClick="getSelected"
+        android:text="Brocolli"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avocado" />
+
+    <CheckBox
+        android:id="@+id/onions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:onClick="getSelected"
+        android:text="Onions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brocolli" />
+
+    <CheckBox
+        android:id="@+id/zuchinni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:onClick="getSelected"
+        android:text="Zuchinni"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onions" />
+
+    <CheckBox
+        android:id="@+id/lobster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="8dp"
+        android:onClick="getSelected"
+        android:text="Lobster"
+        app:layout_constraintStart_toStartOf="@+id/avocado"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <CheckBox
+        android:id="@+id/oyster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:onClick="getSelected"
+        android:text="Oyster"
+        app:layout_constraintStart_toStartOf="@+id/brocolli"
+        app:layout_constraintTop_toBottomOf="@+id/lobster" />
+
+    <CheckBox
+        android:id="@+id/salmon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:onClick="getSelected"
+        android:text="Salmon"
+        app:layout_constraintStart_toStartOf="@+id/onions"
+        app:layout_constraintTop_toBottomOf="@+id/oyster" />
+
+    <CheckBox
+        android:id="@+id/tuna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:onClick="getSelected"
+        android:text="Tuna"
+        app:layout_constraintStart_toStartOf="@+id/zuchinni"
+        app:layout_constraintTop_toBottomOf="@+id/salmon" />
+
+    <CheckBox
+        android:id="@+id/bacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="8dp"
+        android:onClick="getSelected"
+        android:text="Bacon"
+        app:layout_constraintStart_toStartOf="@+id/tuna"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <CheckBox
+        android:id="@+id/duck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:onClick="getSelected"
+        android:text="Duck"
+        app:layout_constraintStart_toStartOf="@+id/oyster"
+        app:layout_constraintTop_toBottomOf="@+id/bacon" />
+
+    <CheckBox
+        android:id="@+id/ham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:onClick="getSelected"
+        android:text="Ham"
+        app:layout_constraintStart_toStartOf="@+id/salmon"
+        app:layout_constraintTop_toBottomOf="@+id/duck" />
+
+    <CheckBox
+        android:id="@+id/sausage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:onClick="getSelected"
+        android:text="Sausage"
+        app:layout_constraintStart_toStartOf="@+id/tuna"
+        app:layout_constraintTop_toBottomOf="@+id/ham" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="67dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:text="Price"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zuchinni" />
+
+    <TextView
+        android:id="@+id/totalhrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <RadioGroup
+        android:layout_width="407dp"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton9">
+
+        <RadioButton
+            android:id="@+id/id_pizza_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="50dp"
+            android:onClick="getSelected" />
+
+        <RadioButton
+            android:id="@+id/id_pizza_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getSelected"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="30dp"/>
+
+        <RadioButton
+            android:id="@+id/id_pizza_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getSelected"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"/>
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
